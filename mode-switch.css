@@ -1,0 +1,38 @@
+:root{
+    --light-mode-color: rgb(2, 207, 207);
+    --dark-mode-color: aqua;
+    --switch-button-light: black;
+    --switch-button-dark: white;
+    --light-mode-shadow: 0 0 4px;
+    --dark-mode-shadow: 0 0 12px;
+    --light-mode-shadow-hover: 0 0 15px;
+    --dark-mode-shadow-hover: 5px 5px 20px;
+    --light-nav:white;
+    --dark-nav:black;
+}
+
+.dark-mode{
+    background-color: black;
+    .news-nav{
+        color: var(--dark-mode-color);
+    }
+    .mode-switcher{
+        color: var(--switch-button-dark);
+    }
+    .search-box:hover{
+        border-color: var(--dark-mode-color);
+    }
+    .search-box:focus{
+        outline: none;
+        border-color: var(--dark-mode-color);
+    }
+    .card{
+        box-shadow: var(--dark-mode-shadow) var(--dark-mode-color);
+    }
+    .card:hover{
+        box-shadow: var(--dark-mode-shadow-hover) var(--dark-mode-color);
+    }
+    .news-nav{
+        background-color: var(--dark-nav);
+    }
+}

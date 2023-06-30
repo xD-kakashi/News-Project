@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="news-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Town</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="jquery-3.7.0.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mode-switch.css">
+    <script src="https://kit.fontawesome.com/0ba230c8bd.js" crossorigin="anonymous"></script>
+    <script src="light-dark.js"></script>
+</head>
+<body class="news-body">
+    <nav class="news-nav">
+        <div class="nav-logo">
+            <img src="assets/news logo (final).png" alt="News Town">
+        </div>
+        <div class="reload-button">
+            <i class="fa-solid fa-rotate-right" onclick="reload()"></i>
+        </div>
+        <div class="time-container">
+            <div class="display-date">
+              <span id="day">day</span>,
+              <span id="daynum">00</span>
+              <span id="month">month</span>
+              <span id="year">0000</span>
+            </div>
+            <div class="display-time"></div>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-element nav-link tech" id="tech" onclick="onNavItemClick('tech')" class="nav-link tech-link">TECH</li>
+            <li class="nav-element nav-link politics" id="politics" onclick="onNavItemClick('politics')" class="nav-link politics-link">POLITICS</li>
+            <li class="nav-element nav-link sports" id="sports" onclick="onNavItemClick('sports')" class="nav-link sports-link">SPORTS</li>
+            <li class="nav-element nav-link finance" id="finance" onclick="onNavItemClick('finance')" class="nav-link finance-link">FINANCE</li>
+            <div class="nav-element search search-bar">
+                <input type="text" class="search-input search-box" id="search-text" placeholder="Search">
+                <button class="search-button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </ul>
+        <div onclick="switch_mode()" class="mode-switcher"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+    </nav>
+
+    <main class="news-content">
+        <div class="card-container" id="card-container">
+            
+        </div>
+    </main>
+    
+    <template id="news-card-template">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news image" id="news-img" class="news-img">
+            </div>
+            <div class="card-content">
+                <h3 class= "news-title" id="news-title">News Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <div class="news-desc" id="news-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deleniti maiores nam excepturi ut ipsum id libero optio fugit ducimus!</div>
+            </div>
+        </div>
+    </template>
+
+    <!-- <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut();
+        });
+    </script> -->
+
+    <script src="index.js"></script>
+
+</body>
+</html>  
